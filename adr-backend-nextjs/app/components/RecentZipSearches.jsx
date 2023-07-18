@@ -16,9 +16,10 @@ const RecentZipSearches = () => {
               <div className='pl-4'>
                 <p className='text-gray-800 font-bold'>{item.search}</p>
                 <p className='text-gray-400 text-sm'>Returned: {item.destinationSlug}</p>
+                <p className='text-gray-700 italic'>From: {item.sourceURL}</p>
               </div>
               <div className='pl-4'>
-                <p className='text-gray-700 italic'>From: {item.sourceURL}</p>
+                
               </div>
               <p className='lg:flex md:hidden absolute right-6 text-sm'>{item.timeSince}</p>
               
