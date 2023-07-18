@@ -5,6 +5,11 @@ import { Inter } from 'next/font/google'
 import { AuthContextProvider } from './context/AuthContext'
 import Header from './components/Header'
 import Head from 'next/head'
+import Sidebar from './components/Sidebar'
+import DashCards from './components/DashCards'
+import ZipBarChart from './components/ZipBarChart'
+import RecentZipSearches from './components/RecentZipSearches'
+import ZipSearchData from './components/ZipSearchData'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,10 +31,16 @@ export default function RootLayout({ children }) {
           <NavBar></NavBar>
           {children}
         </AuthContextProvider> */}
+        <Sidebar>
         <main className='bg-gray-100 min-h-screen'>
           <Header></Header>
+          <DashCards></DashCards>
+          <div className='p-4 grid md:grid-cols-3 grid-cols-1 gap-4'>
+            <ZipSearchData></ZipSearchData>
+            <RecentZipSearches></RecentZipSearches>
+          </div>
         </main>
-       
+        </Sidebar>
 
         </body>
     </html>
